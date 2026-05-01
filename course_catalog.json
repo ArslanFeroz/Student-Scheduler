@@ -1,0 +1,979 @@
+{
+  "courses": {
+    "DS": {
+      "name": "Data Structures",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Smith",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 9
+            },
+            {
+              "day": "Wednesday",
+              "time": 9
+            },
+            {
+              "day": "Friday",
+              "time": 9
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Johnson",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 10
+            },
+            {
+              "day": "Thursday",
+              "time": 10
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Williams",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 14
+            },
+            {
+              "day": "Wednesday",
+              "time": 14
+            },
+            {
+              "day": "Friday",
+              "time": 14
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "ALG": {
+      "name": "Algorithms",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [
+        "DS"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Brown",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 11
+            },
+            {
+              "day": "Wednesday",
+              "time": 11
+            },
+            {
+              "day": "Friday",
+              "time": 11
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Davis",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 13
+            },
+            {
+              "day": "Thursday",
+              "time": 13
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Miller",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 15
+            },
+            {
+              "day": "Wednesday",
+              "time": 15
+            },
+            {
+              "day": "Friday",
+              "time": 15
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "OS": {
+      "name": "Operating Systems",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [
+        "CA"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Wilson",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 9
+            },
+            {
+              "day": "Thursday",
+              "time": 9
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Moore",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 10
+            },
+            {
+              "day": "Wednesday",
+              "time": 10
+            },
+            {
+              "day": "Friday",
+              "time": 10
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Taylor",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 15
+            },
+            {
+              "day": "Thursday",
+              "time": 15
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "DB": {
+      "name": "Database Systems",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [
+        "DS"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Anderson",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 13
+            },
+            {
+              "day": "Wednesday",
+              "time": 13
+            },
+            {
+              "day": "Friday",
+              "time": 13
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Thomas",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 11
+            },
+            {
+              "day": "Thursday",
+              "time": 11
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Jackson",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 16
+            },
+            {
+              "day": "Wednesday",
+              "time": 16
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "CN": {
+      "name": "Computer Networks",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [
+        "OS"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. White",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 8
+            },
+            {
+              "day": "Thursday",
+              "time": 8
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Harris",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 12
+            },
+            {
+              "day": "Wednesday",
+              "time": 12
+            },
+            {
+              "day": "Friday",
+              "time": 12
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Martin",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 14
+            },
+            {
+              "day": "Thursday",
+              "time": 14
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "SE": {
+      "name": "Software Engineering",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Thompson",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 8
+            },
+            {
+              "day": "Wednesday",
+              "time": 8
+            },
+            {
+              "day": "Friday",
+              "time": 8
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Garcia",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 12
+            },
+            {
+              "day": "Thursday",
+              "time": 12
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Martinez",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 17
+            },
+            {
+              "day": "Wednesday",
+              "time": 17
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "CA": {
+      "name": "Computer Architecture",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Robinson",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 16
+            },
+            {
+              "day": "Thursday",
+              "time": 16
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Clark",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 8
+            },
+            {
+              "day": "Wednesday",
+              "time": 8
+            },
+            {
+              "day": "Friday",
+              "time": 8
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Rodriguez",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 14
+            },
+            {
+              "day": "Thursday",
+              "time": 14
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "TC": {
+      "name": "Theory of Computation",
+      "type": "core",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [
+        "ALG"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Lewis",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 10
+            },
+            {
+              "day": "Wednesday",
+              "time": 10
+            },
+            {
+              "day": "Friday",
+              "time": 10
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Lee",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 15
+            },
+            {
+              "day": "Thursday",
+              "time": 15
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Walker",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 16
+            },
+            {
+              "day": "Wednesday",
+              "time": 16
+            },
+            {
+              "day": "Friday",
+              "time": 16
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "ML": {
+      "name": "Machine Learning",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [
+        "ALG"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Hall",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 10
+            },
+            {
+              "day": "Thursday",
+              "time": 10
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Allen",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 14
+            },
+            {
+              "day": "Wednesday",
+              "time": 14
+            },
+            {
+              "day": "Friday",
+              "time": 14
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Young",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 13
+            },
+            {
+              "day": "Thursday",
+              "time": 13
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "CV": {
+      "name": "Computer Vision",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [
+        "ML"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. King",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 11
+            },
+            {
+              "day": "Wednesday",
+              "time": 11
+            },
+            {
+              "day": "Friday",
+              "time": 11
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Wright",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 9
+            },
+            {
+              "day": "Thursday",
+              "time": 9
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Lopez",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 15
+            },
+            {
+              "day": "Wednesday",
+              "time": 15
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "NLP": {
+      "name": "Natural Language Processing",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 3,
+      "prerequisites": [
+        "ML"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Hill",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 11
+            },
+            {
+              "day": "Thursday",
+              "time": 11
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Scott",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 13
+            },
+            {
+              "day": "Wednesday",
+              "time": 13
+            },
+            {
+              "day": "Friday",
+              "time": 13
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Green",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 16
+            },
+            {
+              "day": "Thursday",
+              "time": 16
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "GD": {
+      "name": "Game Development",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [
+        "DS"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Adams",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 15
+            },
+            {
+              "day": "Wednesday",
+              "time": 15
+            },
+            {
+              "day": "Friday",
+              "time": 15
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Baker",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 8
+            },
+            {
+              "day": "Thursday",
+              "time": 8
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Gonzalez",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 10
+            },
+            {
+              "day": "Wednesday",
+              "time": 10
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "MAD": {
+      "name": "Mobile App Development",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [
+        "SE"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Nelson",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 14
+            },
+            {
+              "day": "Thursday",
+              "time": 14
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Carter",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 11
+            },
+            {
+              "day": "Wednesday",
+              "time": 11
+            },
+            {
+              "day": "Friday",
+              "time": 11
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Mitchell",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 17
+            },
+            {
+              "day": "Thursday",
+              "time": 17
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "CYB": {
+      "name": "Cybersecurity",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [
+        "OS"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Perez",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 16
+            },
+            {
+              "day": "Wednesday",
+              "time": 16
+            },
+            {
+              "day": "Friday",
+              "time": 16
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Roberts",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 10
+            },
+            {
+              "day": "Thursday",
+              "time": 10
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Turner",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 14
+            },
+            {
+              "day": "Wednesday",
+              "time": 14
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    },
+    "CC": {
+      "name": "Cloud Computing",
+      "type": "elective",
+      "credits": 3,
+      "difficulty": 2,
+      "prerequisites": [
+        "CN"
+      ],
+      "sections": [
+        {
+          "section_id": 1,
+          "professor": "Dr. Phillips",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 12
+            },
+            {
+              "day": "Thursday",
+              "time": 12
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 2,
+          "professor": "Dr. Campbell",
+          "schedule": [
+            {
+              "day": "Monday",
+              "time": 8
+            },
+            {
+              "day": "Wednesday",
+              "time": 8
+            },
+            {
+              "day": "Friday",
+              "time": 8
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        },
+        {
+          "section_id": 3,
+          "professor": "Dr. Parker",
+          "schedule": [
+            {
+              "day": "Tuesday",
+              "time": 15
+            },
+            {
+              "day": "Thursday",
+              "time": 15
+            }
+          ],
+          "capacity": 30,
+          "enrolled": 0
+        }
+      ]
+    }
+  },
+  "time_slots": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ],
+  "difficulty_levels": {
+    "1": "Easy",
+    "2": "Medium",
+    "3": "Hard"
+  }
+}

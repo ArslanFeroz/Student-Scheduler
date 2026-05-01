@@ -1,0 +1,205 @@
+# Genetic Algorithm Configuration File
+# Course Scheduling Optimization
+# 
+# This file contains all the parameters for your GA.
+# Adjust these values to optimize performance.
+
+# ============================================================
+# POPULATION PARAMETERS
+# ============================================================
+population:
+  size: 60                      # Total population size (50-80 recommended)
+  
+  initialization_strategy:      # How to create initial population
+    random_valid: 0.40          # 40% random valid schedules
+    greedy_time: 0.40           # 40% prioritize time preferences
+    greedy_friend: 0.20         # 20% prioritize friend groupings
+  
+  elitism:
+    enabled: true
+    rate: 0.10                  # Keep top 10% unchanged each generation
+
+# ============================================================
+# SELECTION PARAMETERS
+# ============================================================
+selection:
+  tournament:
+    enabled: true
+    rate: 0.70                  # 70% of selections use tournament
+    tournament_size: 5          # Compare 5 individuals each tournament
+  
+  roulette:
+    enabled: true
+    rate: 0.30                  # 30% of selections use roulette wheel
+
+# ============================================================
+# CROSSOVER PARAMETERS
+# ============================================================
+crossover:
+  probability: 0.80             # 80% chance of crossover
+  
+  operators:                    # Define your crossover operators
+    single_point:
+      enabled: true
+      weight: 0.35              # 35% of crossovers
+      description: "Cut at random student, swap schedules"
+    
+    uniform:
+      enabled: true
+      weight: 0.35              # 35% of crossovers
+      description: "For each student, randomly choose from parent 1 or 2"
+    
+    course_based:
+      enabled: true
+      weight: 0.30              # 30% of crossovers
+      description: "Exchange specific courses between students"
+  
+  repair:
+    max_attempts: 10            # Try up to 10 times to fix conflicts
+    strategies:
+      - "change_section"        # Try different section first
+      - "time_shift"            # Move to different time if needed
+      - "course_swap"           # Swap with another course as last resort
+
+# ============================================================
+# MUTATION PARAMETERS
+# ============================================================
+mutation:
+  base_rates:                   # Base mutation rates for each operator
+    section_change: 0.12        # 12% chance to change course section
+    course_swap: 0.10           # 10% chance to swap two courses
+    time_shift: 0.08            # 8% chance to shift time slot
+    friend_align: 0.15          # 15% chance to align with friend
+  
+  adaptive:
+    enabled: true
+    diversity_threshold: 0.30   # Trigger when diversity falls below 30%
+    rate_multiplier: 1.5        # Multiply all rates by 1.5× when triggered
+    check_interval: 10          # Check diversity every 10 generations
+
+# ============================================================
+# FITNESS FUNCTION WEIGHTS
+# ============================================================
+fitness:
+  weights:
+    time_preference: 0.30       # 30% - Meeting preferred time slots
+    gap_minimization: 0.25      # 25% - Minimizing breaks between classes
+    friend_satisfaction: 0.20   # 20% - Sharing classes with friends
+    workload_balance: 0.15      # 15% - Distributing difficulty across week
+    lunch_break: 0.10           # 10% - Having lunch time free
+  
+  penalties:                    # Penalties for constraint violations
+    hard_constraint: -1000      # Any hard constraint violation
+    time_conflict: -1000        # Student has overlapping classes
+    missing_credits: -800       # Student doesn't have 15 credits
+    too_many_courses: -500      # More than 3 courses in one day
+    blocked_time: -1000         # Class during blocked time
+  
+  normalization:
+    method: "min_max"           # How to normalize scores to [0,1]
+    # Options: "min_max", "z_score", "decimal_scaling"
+
+# ============================================================
+# DIVERSITY MAINTENANCE
+# ============================================================
+diversity:
+  metric: "unique_schedules"    # How to measure diversity
+  # Options: "unique_schedules", "hamming_distance", "entropy"
+  
+  maintenance:
+    enabled: true
+    check_interval: 10          # Check every 10 generations
+    low_threshold: 0.30         # Trigger maintenance below 30%
+    injection_rate: 0.20        # Replace bottom 20% with new random
+  
+  logging:
+    track_over_time: true       # Log diversity each generation
+    plot_enabled: true          # Generate diversity plot
+
+# ============================================================
+# TERMINATION CRITERIA
+# ============================================================
+termination:
+  max_generations: 300          # Stop after 300 generations
+  
+  convergence:
+    enabled: true
+    patience: 40                # Stop if no improvement for 40 generations
+    improvement_threshold: 0.001 # 0.1% improvement threshold
+  
+  similarity:
+    enabled: true
+    threshold: 0.85             # Stop if 85% of population similar
+    tolerance: 0.02             # ±2% fitness considered similar
+
+# ============================================================
+# LOGGING & OUTPUT
+# ============================================================
+logging:
+  level: "INFO"                 # DEBUG, INFO, WARNING, ERROR
+  
+  console:
+    enabled: true
+    frequency: 10               # Print stats every 10 generations
+  
+  file:
+    enabled: true
+    path: "logs/ga_run.log"
+    format: "%(asctime)s - %(levelname)s - %(message)s"
+  
+  statistics:
+    track_best: true            # Track best individual each generation
+    track_average: true         # Track average fitness
+    track_worst: true           # Track worst fitness
+    track_diversity: true       # Track population diversity
+
+# ============================================================
+# VISUALIZATION
+# ============================================================
+visualization:
+  convergence_plot:
+    enabled: true
+    path: "plots/convergence.png"
+    show_confidence: true       # Show confidence intervals
+  
+  diversity_plot:
+    enabled: true
+    path: "plots/diversity.png"
+  
+  final_schedule:
+    enabled: true
+    format: "table"             # Options: "table", "calendar", "json"
+    path: "output/best_schedule.json"
+    color_coded: true
+
+# ============================================================
+# EXPERIMENTAL PARAMETERS
+# ============================================================
+experiment:
+  random_seed: 42               # For reproducibility (set to null for random)
+  num_runs: 10                  # Number of independent runs
+  parallel: false               # Run multiple experiments in parallel
+  
+  operator_analysis:
+    enabled: true               # Track which operators work best
+    log_usage: true             # Log how often each operator is used
+    log_success: true           # Log success rate of each operator
+
+# ============================================================
+# DEBUGGING
+# ============================================================
+debug:
+  validate_every_generation: false  # Slow but thorough
+  save_population_snapshots: false  # Save population every N generations
+  snapshot_interval: 50
+  verbose_repair: false         # Print repair process details
+  
+# ============================================================
+# NOTES
+# ============================================================
+# - All weights must sum to 1.0 in fitness.weights
+# - Base mutation rates are per-individual, not per-gene
+# - Elitism rate + selection rate should equal 1.0
+# - Adjust population size based on problem complexity
+# - Higher diversity maintenance helps avoid local optima
+# - Lower convergence thresholds mean stricter stopping criteria

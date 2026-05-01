@@ -1,0 +1,295 @@
+{
+  "students": {
+    "S1": {
+      "name": "Student 1",
+      "year": 3,
+      "required_credits": 15,
+      "required_courses": {
+        "core": [
+          "DS",
+          "ALG",
+          "OS",
+          "DB"
+        ],
+        "electives": 1,
+        "elective_pool": [
+          "ML",
+          "GD",
+          "MAD"
+        ]
+      },
+      "completed_courses": [
+        "CA",
+        "SE"
+      ],
+      "time_preferences": {
+        "preferred": {
+          "description": "Morning person (prefers 8AM-12PM classes)",
+          "time_slots": [
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "blocked": {
+          "description": "Has part-time job: Cannot take classes 4PM-6PM on Wed & Fri",
+          "slots": [
+            {
+              "day": "Wednesday",
+              "time": 16
+            },
+            {
+              "day": "Wednesday",
+              "time": 17
+            },
+            {
+              "day": "Friday",
+              "time": 16
+            },
+            {
+              "day": "Friday",
+              "time": 17
+            }
+          ]
+        }
+      },
+      "friends": [
+        "S3"
+      ],
+      "max_courses_per_day": 3
+    },
+    "S2": {
+      "name": "Student 2",
+      "year": 4,
+      "required_credits": 15,
+      "required_courses": {
+        "core": [
+          "CN",
+          "TC"
+        ],
+        "electives": 3,
+        "elective_pool": [
+          "ML",
+          "GD",
+          "MAD"
+        ]
+      },
+      "completed_courses": [
+        "DS",
+        "ALG",
+        "OS",
+        "DB",
+        "SE",
+        "CA"
+      ],
+      "time_preferences": {
+        "preferred": {
+          "description": "Afternoon person (prefers 12PM-4PM classes)",
+          "time_slots": [
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "blocked": {
+          "description": "No specific blocked times",
+          "slots": []
+        }
+      },
+      "special_constraints": {
+        "minimize_gaps": true,
+        "description": "Commutes 1 hour: Prefers consecutive classes (no big gaps)"
+      },
+      "friends": [
+        "S4"
+      ],
+      "max_courses_per_day": 3
+    },
+    "S3": {
+      "name": "Student 3",
+      "year": 3,
+      "required_credits": 15,
+      "required_courses": {
+        "core": [
+          "DS",
+          "ALG",
+          "OS",
+          "DB",
+          "CN"
+        ],
+        "electives": 0,
+        "elective_pool": []
+      },
+      "completed_courses": [
+        "CA",
+        "SE",
+        "TC"
+      ],
+      "time_preferences": {
+        "preferred": {
+          "description": "Flexible - can take any time",
+          "time_slots": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        },
+        "blocked": {
+          "description": "Lives on campus: Can take any time",
+          "slots": []
+        }
+      },
+      "friends": [
+        "S1",
+        "S5"
+      ],
+      "max_courses_per_day": 3
+    },
+    "S4": {
+      "name": "Student 4",
+      "year": 2,
+      "required_credits": 15,
+      "required_courses": {
+        "core": [
+          "DS",
+          "ALG",
+          "OS"
+        ],
+        "electives": 2,
+        "elective_pool": [
+          "ML",
+          "GD",
+          "MAD"
+        ]
+      },
+      "completed_courses": [
+        "CA",
+        "SE"
+      ],
+      "time_preferences": {
+        "preferred": {
+          "description": "Morning person (prefers 8AM-12PM classes)",
+          "time_slots": [
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "blocked": {
+          "description": "Has sports practice: Cannot take classes 2PM-4PM on Mon, Wed, Fri",
+          "slots": [
+            {
+              "day": "Monday",
+              "time": 14
+            },
+            {
+              "day": "Monday",
+              "time": 15
+            },
+            {
+              "day": "Wednesday",
+              "time": 14
+            },
+            {
+              "day": "Wednesday",
+              "time": 15
+            },
+            {
+              "day": "Friday",
+              "time": 14
+            },
+            {
+              "day": "Friday",
+              "time": 15
+            }
+          ]
+        }
+      },
+      "friends": [
+        "S2"
+      ],
+      "max_courses_per_day": 3
+    },
+    "S5": {
+      "name": "Student 5",
+      "year": 3,
+      "required_credits": 15,
+      "required_courses": {
+        "core": [
+          "DS",
+          "ALG",
+          "DB",
+          "SE"
+        ],
+        "electives": 1,
+        "elective_pool": [
+          "ML",
+          "GD",
+          "MAD"
+        ]
+      },
+      "completed_courses": [
+        "CA",
+        "OS"
+      ],
+      "time_preferences": {
+        "preferred": {
+          "description": "Late afternoon (prefers 2PM-6PM classes)",
+          "time_slots": [
+            14,
+            15,
+            16,
+            17
+          ]
+        },
+        "blocked": {
+          "description": "Night owl: Avoids early morning (penalty for 8AM classes)",
+          "slots": []
+        }
+      },
+      "special_constraints": {
+        "avoid_early": true,
+        "penalty_time": 8,
+        "description": "Heavy penalty for 8AM classes"
+      },
+      "friends": [
+        "S3"
+      ],
+      "max_courses_per_day": 3
+    }
+  },
+  "friend_pairs": [
+    [
+      "S1",
+      "S3"
+    ],
+    [
+      "S2",
+      "S4"
+    ],
+    [
+      "S3",
+      "S5"
+    ]
+  ],
+  "global_constraints": {
+    "lunch_time": {
+      "time_slot": 12,
+      "preferred_days_free": 3,
+      "description": "Prefer to have 12PM-1PM free at least 3 days a week"
+    },
+    "max_courses_per_day": 3,
+    "min_gap_minutes": 0,
+    "max_gap_hours": 4
+  }
+}
