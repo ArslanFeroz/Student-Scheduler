@@ -1,9 +1,9 @@
 ---
 
-# README for Q2_GA (Question 2)
+
 
 ````markdown
-# Q2_GA - Course Scheduling Genetic Algorithm
+# Course Scheduling Genetic Algorithm
 
 ## Overview
 
